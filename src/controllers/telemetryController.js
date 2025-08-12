@@ -2,7 +2,7 @@ const axios = require("axios");
 const { handler } = require("../utils/derivePayload");
 const buildInsertSQL = require("../utils/buildInsertSQL");
 
-const QUESTDB_URL = "http://35.154.253.103:9000/exec";
+const QUESTDB_URL = process.env.QUESTDB_URL;
 
 exports.insertQecho = async (req, res) => {
   try {
